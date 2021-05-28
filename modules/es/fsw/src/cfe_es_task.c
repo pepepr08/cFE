@@ -983,7 +983,7 @@ int32 CFE_ES_StartAppCmd(const CFE_ES_StartAppCmd_t *data)
              (cmd->ExceptionAction != CFE_ES_ExceptionAction_PROC_RESTART))
     {
         CFE_ES_Global.TaskData.CommandErrorCounter++;
-        CFE_EVS_SendEvent(CFE_ES_START_EXC_ACTION_ERR_EID, CFE_EVS_EventType_ERROR,
+        CFE_EVS_SendEvent(CFE_ES_START_PRIORITY_ERR_EID, CFE_EVS_EventType_ERROR,
                           "CFE_ES_StartAppCmd: Invalid Exception Action: %d.", (int)cmd->ExceptionAction);
     }
     else
