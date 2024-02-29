@@ -7,7 +7,7 @@
 # Note that to use this, the "RTEMS" platform module may need to be added
 # to the system-wide CMake installation as a default CMake does not yet
 # recognize RTEMS as a system name.  An example of this is distributed with
-# the pc-rtems PSP.
+# the generic-rtems PSP.
 
 # Basic cross system configuration
 set(CMAKE_SYSTEM_NAME       RTEMS)
@@ -19,8 +19,8 @@ set(RTEMS_BSP               "pc686")
 
 # these settings are specific to cFE/OSAL and determines which
 # abstraction layers are built when using this toolchain
-SET(CFE_SYSTEM_PSPNAME      pc-rtems)
-SET(OSAL_SYSTEM_BSPTYPE     pc-rtems)
+SET(CFE_SYSTEM_PSPNAME      generic-rtems)
+SET(OSAL_SYSTEM_BSPTYPE     generic-rtems)
 SET(OSAL_SYSTEM_OSTYPE      rtems)
 
 # This is for version specific RTEMS ifdefs needed by the OSAL and PSP
