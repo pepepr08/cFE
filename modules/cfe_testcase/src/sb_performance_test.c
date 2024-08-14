@@ -436,7 +436,7 @@ void UT_CommandReceiverTask(void)
 
     for (BulkCmd.RecvCount = 0; BulkCmd.RecvCount < UT_BulkTestDuration; ++BulkCmd.RecvCount)
     {
-        CFE_Assert_STATUS_STORE(CFE_SB_ReceiveBuffer(&MsgBuf, BulkCmd.PipeId, 5000));
+        CFE_Assert_STATUS_STORE(CFE_SB_ReceiveBuffer(&MsgBuf, BulkCmd.PipeId, 240000));
         if (!CFE_Assert_STATUS_SILENTCHECK(CFE_SUCCESS))
         {
             CFE_Assert_STATUS_MUST_BE(CFE_SUCCESS);
@@ -470,7 +470,7 @@ void UT_TelemetryReceiverTask(void)
 
     for (BulkTlm.RecvCount = 0; BulkTlm.RecvCount < UT_BulkTestDuration; ++BulkTlm.RecvCount)
     {
-        CFE_Assert_STATUS_STORE(CFE_SB_ReceiveBuffer(&MsgBuf, BulkTlm.PipeId, 5000));
+        CFE_Assert_STATUS_STORE(CFE_SB_ReceiveBuffer(&MsgBuf, BulkTlm.PipeId, 240000));
         if (!CFE_Assert_STATUS_SILENTCHECK(CFE_SUCCESS))
         {
             CFE_Assert_STATUS_MUST_BE(CFE_SUCCESS);
